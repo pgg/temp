@@ -2,9 +2,10 @@ import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  OnInit,
   inject,
 } from '@angular/core';
-import { AppFacade } from './state';
+import { AppActions, AppFacade } from './state';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,10 @@ import { AppFacade } from './state';
   imports: [AsyncPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
+export class AppComponent2 implements OnInit {
   facade = inject(AppFacade);
+
+  ngOnInit(): void {
+    this.facade.store.dispatch(AppActions.load())
+  }
 }
