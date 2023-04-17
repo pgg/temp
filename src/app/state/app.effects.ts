@@ -23,8 +23,8 @@ export class AppEffects implements OnInitEffects {
 
   progress$ = createEffect(() => this.#actions$.pipe(
     ofType(AppActions.load),
-    exhaustMap(() => interval().pipe(
-      map(next => next),
+    exhaustMap(() => interval(100).pipe(
+      map(next => next * 20),
       takeWhile(next => next < 100, true),
       map(progress => AppActions.loadProgress({ progress }))
     )),
