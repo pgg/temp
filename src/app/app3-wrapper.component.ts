@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-wrapper',
+  selector: 'app-root',
   template: '<router-outlet></router-outlet>',
   standalone: true,
   imports: [RouterOutlet],

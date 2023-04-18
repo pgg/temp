@@ -5,7 +5,6 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
   template: 'app works!',
   standalone: true,
   imports: [AsyncPipe],

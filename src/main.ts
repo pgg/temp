@@ -17,3 +17,21 @@ bootstrapApplication(AppComponent, {
   ],
 }).catch((err) => console.error(err));
 
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { provideAnimations } from '@angular/platform-browser/animations';
+// import { App3WrapperComponent } from './app/app3-wrapper.component';
+// import { provideRouter } from '@angular/router';
+// import { App3Component } from './app/app3.component';
+
+// bootstrapApplication(App3WrapperComponent, {
+//   providers: [
+//     provideAnimations(),
+//     provideRouter([
+//       {
+//         path: '**',
+//         component: App3Component
+//       }
+//     ]),
+//   ],
+// }).catch((err) => console.error(err));
+
